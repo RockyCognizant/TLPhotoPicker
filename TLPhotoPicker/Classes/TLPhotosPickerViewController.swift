@@ -1264,16 +1264,20 @@ extension TLPhotosPickerViewController: UIViewControllerPreviewingDelegate {
 
 extension TLPhotosPickerViewController {
     func selectCameraCell(_ cell: TLPhotoCollectionViewCell) {
+        /*
         if Platform.isSimulator {
             print("not supported by the simulator.")
         } else {
+         */
             if configure.cameraCellNibSet?.nibName != nil {
                 cell.selectedCell()
             } else {
                 showCameraIfAuthorized()
             }
             logDelegate?.selectedCameraCell(picker: self)
+        /*
         }
+         */
     }
     
     func toggleSelection(for cell: TLPhotoCollectionViewCell, at indexPath: IndexPath) {
